@@ -1,0 +1,118 @@
+ 1.packages are installed 
+
+Package                       Version
+----------------------------- -------
+asgiref                       3.12.1
+Django                        6.0.7
+django-filter                 26.1
+djangorestframework           3.17.1
+djangorestframework_simplejwt 5.5.1
+pip                           25.0.1
+PyJWT                         2.13.0
+PyMySQL                       1.2.0
+python-dotenv                 1.2.2
+sqlparse                      0.5.5
+tzdata                        2026.3
+
+2. django project created 
+3. CREATE DATABASE job_tracker_db;
+4. install ,mysql driver  (pip install mysqlclient)
+5. update databbases in settings.py annd  migrate 
+6. Create app -  users and register it  settings.py
+7. users/models.py --create model and tell djanngo to use it AUTH_USER_MODEL = "users.User"(app.modelname)
+8. register model in admin (dont allow  users to admin panel)
+9. create super user
+10. JWT Authentication -token to access protected APIs  (pip install djangorestframework-simplejwt)
+11. configure settings.py -it tells django Use JWT authentication for incoming API requests.
+12. Create serializer inside app - A serializer acts as a translator between JSON and Django models.
+JSON Request
+      │
+      ▼
+Serializer
+      │
+      ▼
+Validate Data
+      │
+      ▼
+Create User Object
+      │
+      ▼
+Save to MySQL
+
+13.create views in app and  urls
+14.tell project url about app url
+15.JWT Authenticaation  access andd refresh
+16. Another app called applications
+17.create models inside applications
+18.Register Model in Admin
+19.add samples 
+20. create  seriallizer insiide applicationns
+and create views .py and urls.py connncted with project urls
+21.Test as applicant , reteriev application , delete , update 
+
+
+22. Filtering 
+
+23. register third party app in settings.py (installed apps)
+24.update rest framework in settings.py
+25.views.py /applications updated
+
+26.Pagination (django-filetr libarary)
+27.update restframework in settings.py
+
+28.create app for interviews 
+29.register it and create models and admin 
+30.migrate and run server
+31.serializers.py
+32.views.py and urls.py
+33.django signals signals.py (application)
+34.send email using django signal and update in settings.py
+
+35.Role based permissions
+Admin
+   │
+   ├── Can see all job applications
+   ├── Can update anyone's application
+   ├── Can delete any application
+   └── Can view all interview rounds
+
+Applicant
+   │
+   ├── Can create own application
+   ├── Can view only own applications
+   ├── Can update own application
+   └── Cannot access other users' applications
+36.create permissionns file
+37. Imported IsAdminOrOwner 
+38. Updated permission_classes in views.py
+
+What you've completed
+✅ Custom User Model
+✅ JWT Authentication
+✅ Login & Refresh Token
+✅ Job Application CRUD
+✅ Interview Round CRUD
+✅ Filtering
+✅ Searching
+✅ Pagination
+✅ Django Signals
+✅ Automatic Email Notifications (Console)
+✅ Role-Based Permissions (Admin vs Applicant)
+
+Resume Upload
+
+39. uppdate media in settings.py
+40.configure urls in projects.urls
+
+41.Deployment 
+
+gitignore requirements
+42.runtime Procfile,
+Install WhiteNoise Middleware in settings.py 
+also static debud=true 
+secret key and allowe hosts rest frameworks
+
+42.Github
+
+initialize git  (git init )
+git status
