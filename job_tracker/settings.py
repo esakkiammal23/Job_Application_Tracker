@@ -49,12 +49,14 @@ INSTALLED_APPS = [
     'applications.apps.ApplicationsConfig',
     'django_filters',
     "interviews",
+    "corsheaders",
     
 ]
 
 MIDDLEWARE = [
 
     'django.middleware.security.SecurityMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -166,3 +168,7 @@ DEFAULT_FROM_EMAIL = "noreply@jobtracker.com"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
