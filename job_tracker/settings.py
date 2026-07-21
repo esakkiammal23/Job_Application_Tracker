@@ -96,12 +96,17 @@ DATABASES = {
         "USER": os.getenv("DB_USER"),
         "PASSWORD": os.getenv("DB_PASSWORD"),
         "HOST": os.getenv("DB_HOST"),
-        "PORT": os.getenv("DB_PORT", "4000"),
+        "PORT": os.getenv("DB_PORT", "3306"),
         "OPTIONS": {
             "ssl_mode": "VERIFY_IDENTITY",
         },
     }
 }
+
+print("DB NAME:", DATABASES["default"]["NAME"])
+print("DB HOST:", DATABASES["default"]["HOST"])
+print("DB PORT:", DATABASES["default"]["PORT"])
+print("DB USER:", DATABASES["default"]["USER"])
 AUTH_USER_MODEL = "users.User"
 
 # Password validation
