@@ -103,12 +103,12 @@ DATABASES = {
     }
 }
 
-print("DB NAME:", DATABASES["default"]["NAME"])
-print("DB HOST:", DATABASES["default"]["HOST"])
-print("DB PORT:", DATABASES["default"]["PORT"])
-print("DB USER:", DATABASES["default"]["USER"])
-AUTH_USER_MODEL = "users.User"
-
+print("=== DATABASE CONFIG ===")
+print("DB_NAME:", os.getenv("DB_NAME"))
+print("DB_HOST:", os.getenv("DB_HOST"))
+print("DB_PORT:", os.getenv("DB_PORT"))
+print("DB_USER:", os.getenv("DB_USER"))
+print("=======================")
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
 
